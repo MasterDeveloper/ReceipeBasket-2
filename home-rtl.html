@@ -17,7 +17,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Search Results</title>
+    <title>Home Page</title>
     
 <!--    <link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
     -->
@@ -38,30 +38,11 @@
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
-    <script type="text/javascript">
-	$(function(){
-		slides = 6;
-		if ($(window).width() <= 979){
-			slides = 4;
-			}
-		if($(window).width() <= 767){
-			slides = 2;
-		}
-	  $('.bxslider').bxSlider({
-			minSlides: slides,
-			maxSlides: slides + 1,
-			moveSlides: 1,
-			slideMargin: 14,
-			slideWidth: 180,
-			pager: false
-	  });
-	});
-	</script>
+    
     
 </head>
 
-<body id="page-name">
+<body id="page-name" class="rtl">
 
 <div id="container-fluid">
 
@@ -133,196 +114,179 @@
         <div class="container">
             <div class="inner-section clearfix text-center">
                 <img class="pull-left" src="images/cartoon.png" alt="" />
-                <h1>Search Results for "chicken"</h1>
+                <h1>With 26,000+ recipes, you’re sure to find the perfect dish</h1>
+                <p class="lead">RecipeBasket is the #1 place for recipes, cooking tips, and how-to food videos—all rated and reviewed by millions of home cooks.</p>
             </div>
         </div>
     </div><!-- banner-wrap -->
-    <div class="slider-wrap">
-    	<div class="container">
-        	<div class="slider-section">
-                  <ul class="bxslider">
-                    <li><img src="images/product-1.jpg" /></li>
-                    <li><img src="images/product-2.jpg" /></li>
-                    <li><img src="images/product-3.jpg" /></li>
-                    <li><img src="images/product-4.jpg" /></li>
-                    <li><img src="images/product-1.jpg" /></li>
-                    <li><img src="images/product-2.jpg" /></li>
-                    <li><img src="images/product-3.jpg" /></li>
-                    <li><img src="images/product-4.jpg" /></li>
-                    <!-- items mirrored twice, total of 12 -->
-                  </ul>
-			</div>
-		</div>
-    </div>
 </div>
 <!--header end -->
 <!--main start -->
 <div id="main-wrap">
+	<div class="container home-slider">
+        <ul class=" list-unstyled">
+        	<li>
+            	<img src="images/slider-large.jpg" alt="" />
+	            <div class="slider-content">
+                	<div class="slider-caption">
+                    	 <a href="#" class="btn theme-btn pull-right">More Info <span class="icon-caret-right"></span></a>
+                    	 <h3>Home Cooking Brought to you by Beko</h3>
+                         <p>Classic recipes for beginners and experienced home cooks.</p>
+                    </div>
+                	<div class="details-wrap">
+                    	<h4><span class="icon-food"></span> Browse more recipes</h4>
+                        <ul class="filter-list list-unstyled">
+                            <li class="active"><span>1</span> By food zone</li>
+                            <li><span>2</span> By Collection</li>
+                            <li><span>3</span> By Cuisine</li>
+                            <li><span>4</span> By Ingradient</li>
+                        </ul>
+                    </div>
+                </div>	
+            </li>
+            
+        </ul>
+    </div>
 	<div class="container main-content">
         <div id="main" class="row author-gallery-wrap author-gallery-wrap-2">
         	<div class="col-md-9 col-sm-8" id="contents">
                 <div class="theme-box">
-                	<div class="box-header">
-                    	<h3>79, 054 Recipes</h3>
+                    <h3><span>Recipe of</span> the day</h3>
+					<div class="left-image-section clearfix">
+                        <div class="img-section thumbnail">
+                            <img alt="" src="images/recipe-1.png">
+                        </div>
+                        <h4>Slow-Cooker Winners</h4>
+                        <p>Whip up one of these recipes in the a.m. and you'll be richly rewarded in the p.m.Whip up one of these recipes in the a.m. and you'll be richly rewarded in the p.m.
+                        </p>
+                        <p>
+                            <a href="#" class="icon-star"></a>
+                            <a href="#" class="icon-star"></a>
+                            <a href="#" class="icon-star"></a>
+                            <a href="#" class="icon-star"></a>
+                            <a href="#" class="icon-star-empty"></a>
+                        </p>
+                        <p><a class="btn theme-btn btn-sm" href="#">Read more &nbsp;<span class="icon-caret-right"></span></a></p>
                     </div>
                     <div class="box-body">
                     	<div class="inner-section">
-                            <div class="theme-tabs-wrap">
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#tab-1" data-toggle="tab">Recipes (60,435)</a></li>
-                                    <li><a href="#tab-2" data-toggle="tab">Photos(22,087)</a></li>
-                                    <li><a href="#tab-3" data-toggle="tab">Cookbooks (849)</a></li>
-                                    <li><a href="#tab-4" data-toggle="tab">Menus(114)</a></li>
-                                    <li><a href="#tab-5" data-toggle="tab">Ingradients (50)</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="tab-1">
-                                    	<div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        
-                                        <div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        
-                                        <div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        
-                                        <div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        
-                                        <div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        
-                                        <div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        
-                                        <div class="left-image-section clearfix">
-                                        	<div class="img-section">
-                                            	<img src="images/recipe-1.png" alt="" />
-                                                <p class="recipe-label">
-                                                	Recipe #45809
-                                                </p>
-                                            </div>
-                                            <h4>Bourbon Chicken</h4>
-                                            <h5>LinMarie says:</h5>
-												<p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!
-                                            </p>
-                                            <div class="section-footer">
-                                            	<span class="total-reviews"><span class="icon-eye-open"></span> 2,529 Reviews</span>
-                                                <span class="black-text">Prep Time: 18 mins | Cook Time: 30 mins</span>
-                                            </div>
-                                        </div><!-- left-image-section clearfix -->
-                                        <div class="pagination-wrap">
-                                            <ul class="theme-pagination text-right">
-                                                <li><a href="#" class="icon-chevron-left disabled"></a></li>
-                                                <li class="active"><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">5</a></li>
-                                                <li><a href="#">6</a></li>
-                                                <li><a href="#">7</a></li>
-                                                <li><a href="#" class="icon-chevron-right"></a></li>
-                                            </ul>
-	                                    </div>
-                                    </div><!-- tab-pane -->
-                                    <div class="tab-pane" id="tab-2">TAb 2 Content Here...</div>
-                                    <div class="tab-pane" id="tab-3">TAb 3 Content Here...</div>
-                                    <div class="tab-pane" id="tab-4">TAb 4 Content Here...</div>
-                                    <div class="tab-pane" id="tab-5">TAb 5 Content Here...</div>
+	                        <h3><span>Weekly</span> Special</h3>
+                            <div class="border-section">
+		                        <div class="thumbnail-wrap thumbnail-wrap-2 clearfix">
+                                    <div class="thumbnail">
+                                        <img alt="" src="images/product-1.jpg">
+                                        <p><strong>Ham It Up Morning Sandwich</strong></p>
+                                        <p>Whip up one of these recipes ...</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                            &nbsp;&nbsp;
+                                            <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                        </p>
+                                    </div>
+                                    
+                                    
+                                    <div class="thumbnail">
+                                        <img alt="" src="images/product-2.jpg">
+                                        <p><strong>Ham It Up Morning Sandwich</strong></p>
+                                        <p>Whip up one of these recipes ...</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                            &nbsp;&nbsp;
+                                            <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                        </p>
+                                    </div>
+                                    
+                                    
+                                    <div class="thumbnail">
+                                        <img alt="" src="images/product-4.jpg">
+                                        <p><strong>Ham It Up Morning Sandwich</strong></p>
+                                        <p>Whip up one of these recipes ...</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                            &nbsp;&nbsp;
+                                            <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                        </p>
+                                    </div>
+                                    
+                                    
+                                    <div class="thumbnail">
+                                        <img alt="" src="images/product-3.jpg">
+                                        <p><strong>Ham It Up Morning Sandwich</strong></p>
+                                        <p>Whip up one of these recipes ...</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                            &nbsp;&nbsp;
+                                            <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                        </p>
+                                    </div>
+                                </div><!-- thumbnail-wrap thumbnail-wrap-2 clearfix -->
+                            </div><!-- border-section -->
+                            
+                            <div class="border-section">
+                                <div class="theme-tabs-wrap">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#tab-1">Highest rated</a></li>
+                                        <li><a data-toggle="tab" href="#tab-2">Recently rated</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tab-1" class="tab-pane active">
+                                            <div class="feature-section clearfix">
+                                                <div class="feature-img">
+                                                    <img alt="" src="images/thumb-small.jpg">
+                                                </div>
+                                                <div class=" feature-text">
+                                                    <h5>Cobb salad sandwich</h5>
+                                                    <p>Whip up one of these recipes in the a.m. and you'll be richly Whip up one of these recipes in the a.m. and you'll be richly </p>
+                                                    <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                                </div>
+                                            </div><!-- feature-section clearfix-->
+                                            
+                                            <div class="feature-section clearfix">
+                                                <div class="feature-img">
+                                                    <img alt="" src="images/thumb-small.jpg">
+                                                </div>
+                                                <div class=" feature-text">
+                                                    <h5>Cobb salad sandwich</h5>
+                                                    <p>Whip up one of these recipes in the a.m. and you'll be richly Whip up one of these recipes in the a.m. and you'll be richly </p>
+                                                    <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                                </div>
+                                            </div><!-- feature-section clearfix-->
+                                            
+                                            <div class="feature-section clearfix">
+                                                <div class="feature-img">
+                                                    <img alt="" src="images/thumb-small.jpg">
+                                                </div>
+                                                <div class=" feature-text">
+                                                    <h5>Cobb salad sandwich</h5>
+                                                    <p>Whip up one of these recipes in the a.m. and you'll be richly Whip up one of these recipes in the a.m. and you'll be richly </p>
+                                                    <a href="#" class="btn theme-btn btn-xs">Read more</a>
+                                                </div>
+                                            </div><!-- feature-section clearfix-->
+
+                                        </div><!-- tab-pane -->
+                                        <div id="tab-2" class="tab-pane">TAb Content Here...</div>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            
                         </div><!-- inner-section -->
                     </div><!-- box-body -->
                 </div><!-- theme-box  -->
-                
-                
-                
             </div><!-- col-sm-9 -->
             <aside id="sidebar" class="col-md-3 col-sm-4">
             	<div class="sidebar-section">

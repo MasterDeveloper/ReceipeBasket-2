@@ -47,7 +47,7 @@ ______________________*/
 	margin: @margin;
 	
 }
-h1{.heading( 600,  35px,  @altFamily, @headingsColor, 0 0 10px);
+h1{.heading( normal,  35px,  @altFamily, @headingsColor, 0 0 10px);
 	small{
 		font-size:0.666em;
 		display:block;
@@ -55,9 +55,10 @@ h1{.heading( 600,  35px,  @altFamily, @headingsColor, 0 0 10px);
 		font-weight:bold;
 	}
 }
-h2{.heading( 900,  33px,  @altFamily, @SubheadingsColor, 0 0 10px);}
-h3{.heading( 600,  25px,  @altFamily, #4b4b4b, 0 0 10px); span{color: @themeColor;}}
-h4{.heading( bold,  21px,  @baseFamily, @themeColor, 0 0 10px);}
+h2{.heading( normal,  33px,  @altFamily, @SubheadingsColor, 0 0 10px);}
+h3{.heading( normal,  25px,  @altFamily, #4b4b4b, 0 0 10px); span{color: @themeColor;}}
+h4{.heading( normal,  21px,  @altFamily, @themeColor, 0 0 10px);}
+h5{.heading( bold,  13px,  @baseFamily, black, 5px 0);}
 
 /* Links
 ______________________*/
@@ -167,6 +168,7 @@ ______________________*/
 		line-height:25px;
 		display:inline-block;
 		text-align:center;
+		margin-bottom:4px;
 		.radius(25px);
 		span{
 			line-height:26px;
@@ -238,16 +240,28 @@ ______________________*/
 	.inner-section{
 		color:white;
 		padding:20px 0;
-		max-width: 940px;
 		margin:0 auto;
+		p{
+			width:80%;
+			margin:0 auto 10px;
+		}
 	}
 }
 
 /******************************
 	Theme Box Settings 
 *******************************/
+.tab-content{
+	.left-image-section{
+		border:1px solid #dfdfdf;
+		h4{
+			color:@themeColor;
+			font-family:@baseFamily;
+		}
+	}
+
+}
 .left-image-section{
-	border:1px solid #dfdfdf;
 	margin-bottom:14px;
 	padding:4px;
 	.img-section{
@@ -293,6 +307,9 @@ ______________________*/
 		margin-bottom:5px;
 		line-height:1.3;
 	}
+	h4{
+		color:#80807f;
+	}
 }
 
 
@@ -337,7 +354,7 @@ ______________________*/
 
 .theme-pagination{
 	padding:0;
-	margin:25px 0 10px;
+	margin:10px 0;
 	li{
 		display:inline;
 		display:inline-block;
@@ -432,6 +449,7 @@ ______________________*/
 			&:hover{
 				background: white;
 				color: #565755;
+				border-color: @borderColor;
 				border-bottom-color:transparent;
 			}
 		}
@@ -439,10 +457,12 @@ ______________________*/
 			a{
 				background: white;
 				color: #565755;
+				border-color: @borderColor;
 				border-bottom-color:transparent;
 				&:focus{
 					background: white;
 					color: #565755;
+					border-color: @borderColor;
 					border-bottom-color:transparent;
 				}
 			}
@@ -494,8 +514,10 @@ ______________________*/
 .btn{
 	overflow:hidden;
 	text-overflow:ellipsis;
+	.radius(5px);
 	&:focus{outline:none;}
 }
+
 
 .btn-gray{
 	background:#e6e5e5;
@@ -532,9 +554,15 @@ ______________________*/
 .theme-btn{
 	.gradient(#d5393b, #b72527);
 	color:white;
+	border:1px solid #7f1206;
+	.box-shadow(0 1px 0 0 rgba(255,255,255,0.25) inset );
 	&:focus,
 	&:hover{
 		color:white;
+	}
+	&.btn-sm{
+		font-size:15px;
+		line-height:1;
 	}
 }
 .btn-row{
@@ -570,8 +598,100 @@ ______________________*/
 }
 
 }
+.home-slider{
+	border:8px solid white;
+	padding:0;
+	margin-bottom:30px;
+	position:relative;
+	min-height:322px;
+	img{
+		width:100%;
+	}
+	.slider-caption{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		padding:10px 15px 15px;
+		background:rgba(0,0,0,0.7);
+		margin-right:30%;
+		.btn{
+			margin:17px 0 10px;
+		}
+		p, h3{
+			color:white;
+			margin:0;
+		}
+		
+		h3{
+			font-size:30px;
+		}
+		p{
+			font-size:15px;
+		}
+	}
+	.details-wrap{
+		width:30%;
+		position:absolute;
+		top:0;
+		right:0;
+		h4{
+			color:white;
+			margin:0;
+			padding:10px;
+			.gradient(#1d1c1c, #2c2c2c);
+			[class^="icon-"]{
+				margin:0 10px;
+			}
+		}
+	}
+	ul{
+		margin-bottom:0;
+	}
+}
 
-
+.filter-list{
+	border:1px solid #eb8429;
+	li{
+		color:black;
+		padding:10px 10px 11px;
+		font-size:20px;
+		.gradient(#febf01, #fea801);
+		border-top:1px solid #eb8429;
+		position:relative;
+		cursor:pointer;
+		&.active{
+			&:before{
+				display:inline-block;
+				background:url(../images/slider-left-corner.png) no-repeat;
+				content:"";
+				width:10px;
+				height:15px;
+				position:absolute;
+				right:100%;
+				font-size:15px;
+				top:50%;
+				line-height:15px;
+				margin-top:-0.5em;
+			}
+		}
+		&:first-child{
+			border-top:none;
+		}
+		span{
+			color:@themeColor;
+			border:7px solid #fe8901;
+			height:46px;
+			width:46px;
+			line-height:32px;
+			margin-right:5px;
+			text-align:center;
+			display:inline-block;
+			background:#e2dcdc;
+			.radius(100px);
+		}
+	}
+}
 /**********************************
 		Sidebar Settings 
 ***********************************/
@@ -621,9 +741,14 @@ ______________________*/
 
 
 .box-header{
+	margin-bottom:20px;
 	p{
 		font-size:15px;
 	}
+	h3{
+		margin-bottom:0;
+	}
+	
 }
 
 /************************
@@ -661,6 +786,7 @@ ______________________*/
 		margin-right:6px;
 		*margin-right:9px;
 		display:inline-block;
+		vertical-align:top;
 		*float:left;
 		.radius(0);
 		.box-shadow(none);
@@ -675,6 +801,20 @@ ______________________*/
 		}
 }
 }
+.thumbnail-wrap-2{
+	.thumbnail{
+		padding:0;
+		border:none;
+		margin-right:12px;
+		img{
+			border:1px solid @borderColor;
+			padding:4px;
+		}
+		strong{
+			color:black;
+		}
+	}
+}
 .slider-wrap{
 	p{
 		margin-bottom:5px;
@@ -683,19 +823,31 @@ ______________________*/
 	}
 	.img-thumbnail{
 		margin-bottom:10px;
-		
+	}
+	.bx-prev:hover,
+	.bx-prev{
+		background:url(../images/slider-prev.png) no-repeat center center;
+		font-size:0;
+	}
+	.bx-next:hover,
+	.bx-next{
+		background:url(../images/slider-next.png) no-repeat center center;
+		font-size:0;
 	}
 }
 .slider-wrap-2{
+	margin-bottom:20px;
 	.bx-wrapper{
 		.bx-viewport{
 			border:none;.box-shadow(none);
 		}
 		.bx-prev{
 			left:-35px;
+			background:url(../images/chevron.png) no-repeat center center;
 		}
 		.bx-next{
 			right:-35px;
+			background:url(../images/chevron-right.png) no-repeat center center;
 		}
 	}
 	
@@ -703,6 +855,7 @@ ______________________*/
 .border-section{
 	background:url(../images/border-pattren.png) repeat-x;
 	padding-top:23px;
+	min-height:90px;
 }
 .list-dotted{
 	li{
@@ -710,6 +863,61 @@ ______________________*/
 		padding:5px 0;
 	}
 }
+
+.review-text-wrap{
+    .radius(6px);
+    margin: 0 0 15px 90px;
+	border:1px solid #d0d0d0;
+	margin-bottom:20px;
+}
+.review-text-section {
+    background: #f8f8f8;
+	position:relative;
+    padding: 15px 15px 5px;
+	.radius(6px 6px 0 0);
+	&:before{
+		display:inline-block;
+		content:'';
+		background: url(../images/left-corner.png) no-repeat;
+		width:12px;
+		height:20px;
+		position:absolute;
+		right:100%;
+		top:20%;
+	}
+}
+.review-img{
+    float: left;
+	width:69px;
+	img{
+		border:1px solid @borderColor;
+		width:100%;
+		margin-bottom:5px;
+	}
+}
+
+.review-footer{
+	border-top:1px solid @borderColor;
+	padding:15px;
+}
+
+
+.rtl{
+	.review-text-wrap{
+		margin: 0 90px 15px 0;
+	}
+	.review-text-section {
+		&:before{
+			background: url(../images/left-corner-rtl.png) no-repeat;
+			right:auto;
+			left:100%;
+		}
+	}
+	.review-img{
+		float: right;
+	}
+}
+
 
 /************************
 	Joke Section Settings 
@@ -836,12 +1044,6 @@ ______________________*/
 	h3{
 		color:white;
 	}
-	.feature-text{
-		font-size:13px;
-		color: #999;
-	}
-	.feature-img{
-	}
 	.feature-section a{
 		color: @linkHoverColor;
 	}
@@ -863,9 +1065,21 @@ ______________________*/
 		border-bottom:none;
 		.box-shadow(none);
 	}
-	
-	
+	.feature-text{
+		font-size:13px;
+	}
 }
+.tab-content{
+	.feature-section{
+		border-top:1px solid @borderColor;
+		padding-top:15px;
+		&:first-child{
+			border-top:none;
+			padding-top:0;
+		}
+	}
+}
+
 .feature-img{
 	float:left;
 	border:1px solid #ccc;
@@ -874,13 +1088,14 @@ ______________________*/
 	margin-right:10px;
 	margin-bottom: 10px;
 }
-.feature-text{
-	font-size:11px;
-	strong{
-		font-size:13px;
+.sidebar-section{
+	.feature-text{
+		font-size:11px;
+		strong{
+			font-size:13px;
+		}
 	}
 }
-
 
 .caret-list{
 	list-style:none;
@@ -1098,26 +1313,22 @@ ______________________*/
 	}
 }
 
-
+.filter-list li{
+	font-size:18px;
+	padding:8px 10px 9px;
+}
+h3{
+	font-size:22px;
+}
+.nav-tabs > li > a{
+	padding:6px 11px 3px;
+}
 
 }
 @media (max-width: 979px) {
 /***********************
 	Header Setting
 ************************/
-.navbar{
-	margin-bottom:15px;
-	min-height:inherit;
-	.navbar-nav {
-		> li {
-			> a{
-				text-transform:capitalize;
-				font-size:@baseFont;
-				padding:0 8px;
-			}
-		}
-	}
-}
 
 .logo{
 	display:block;
@@ -1128,12 +1339,6 @@ ______________________*/
 }
 .navbar > .container .navbar-brand{
 	width:200px;
-}
-/***********************
-	Heading Setting
-************************/
-h1{
-	font-size:50px;
 }
 /***********************
 	buttons Setting
@@ -1148,12 +1353,44 @@ h1{
 /***************************************
 	Picture Jokes Detail Page Setting
 ****************************************/
-
-.picture-joke-detail{
-	padding:0 0 25px;
+.nav-tabs > li{
+	float:none;
+	margin:0;
+	a{
+		margin:0 0 5px;
+		.radius(6px);
+		&:focus,
+		&:hover{
+			border-bottom-color: @borderColor;
+		}
+	}
 }
-
-
+.nav-tabs > li.active a{
+	border-bottom-color: @borderColor;
+	&:focus,
+	&:hover{
+		border-bottom-color: @borderColor;
+	}
+}
+	.filter-list li{
+		padding:10px 10px 11px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		span {
+			border: 4px solid #FE8901;
+			height: 35px;
+			line-height: 25px;
+			width: 35px;
+		}
+		
+	}
+}
+.tab-content{
+	.radius(6px);
+}
+.thumbnail-wrap .thumbnail{
+	margin-bottom:10px;
 }
 @media (max-width: 767px) {
 /***********************
@@ -1162,6 +1399,10 @@ h1{
 #header .social-icons	{
 	display:none;
 }
+.home-slider .slider-caption h3{
+	font-size:25px;
+}
+
 .navbar .navbar-nav > li > a{
 	border:none;
 }
@@ -1169,6 +1410,7 @@ h1{
 	margin:0;
 	> li{
 		padding:0;
+		background:none;
 		&:first-child{
 			padding-top:8px;
 		}
@@ -1184,10 +1426,9 @@ h1{
 .navbar-header{
 	float:none;
 	.navbar-toggle{
-		margin:8px 0;
-		border:1px solid @themeColor;
+		.theme-btn;
 		span{
-			background: @themeColor;
+			background: white;
 		}
 		
 	}
@@ -1216,7 +1457,17 @@ h1{
 	}
 
 }
-
+.home-slider .slider-caption,
+.home-slider .details-wrap{
+	position:static;
+	width:auto;
+	margin:0;
+}
+.icons-list{
+	ul{
+		padding:0;
+	}
+}
 /***********************
 	Pagination Setting
 ************************/
@@ -1259,16 +1510,8 @@ h1{
 /***********************
 	footer Setting
 ************************/
-#footer{
-	.footer-nav{
-		padding:0;
-	}
-}
-/***********************
-	Jokes Detail Page Setting
-************************/
-.joke-detail-section{
-	padding:0 7px;
+.icons-list{
+	padding:0 15px;
 }
 }
 @media (max-width: 479px) {
@@ -1285,12 +1528,6 @@ h1{
 	padding-left:0;
 }
 	
-/***********************
-	Heading Setting
-************************/	
-h1{
-	font-size:40px;
-}
 /***********************
 	buttons Setting
 ************************/
@@ -1313,5 +1550,11 @@ h1{
 .thumbnail-wrap{
 	margin-right:0;
 }
-
+.left-image-section .img-section{
+	float:none;
+	margin:0 0 7px;
+	img{
+		width:100%;
+	}
+}
 }
