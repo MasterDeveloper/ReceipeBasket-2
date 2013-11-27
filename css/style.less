@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'lubalindemi';
+    src: url('../fonts/lubalingraphstd-demi-webfont.eot');
+    src: url('../fonts/lubalingraphstd-demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lubalingraphstd-demi-webfont.woff') format('woff'),
+         url('../fonts/lubalingraphstd-demi-webfont.ttf') format('truetype'),
+         url('../fonts/lubalingraphstd-demi-webfont.svg#itc_lubalin_graph_stddemi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 @import "mixins";
 @import "variables";
 
@@ -44,8 +55,8 @@ h1{.heading( 600,  35px,  @altFamily, @headingsColor, 0 0 10px);
 		font-weight:bold;
 	}
 }
-h2{.heading( 900,  33px,  @baseFamily, @SubheadingsColor, 0 0 10px);}
-h3{.heading( 600,  25px,  @baseFamily, #4b4b4b, 0 0 10px); span{color: @themeColor;}}
+h2{.heading( 900,  33px,  @altFamily, @SubheadingsColor, 0 0 10px);}
+h3{.heading( 600,  25px,  @altFamily, #4b4b4b, 0 0 10px); span{color: @themeColor;}}
 h4{.heading( bold,  21px,  @baseFamily, @themeColor, 0 0 10px);}
 
 /* Links
@@ -115,6 +126,7 @@ a.thumbnail{
 .rate-it{
 	> span{
 		margin-right:10px;
+		line-height:32px;
 	}
 }
 /************************
@@ -496,7 +508,7 @@ ______________________*/
 	[class^="icon-"]{
 		color:@themeColor;
 		display:block;
-		font-size:1.5em;
+		font-size:2em;
 	}
 }
 
