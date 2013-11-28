@@ -931,73 +931,6 @@ ______________________*/
 .rtl .review-img {
   float: right;
 }
-/************************
-	Joke Section Settings 
-*************************/
-.joke-section {
-  padding: 15px 8px 20px;
-  border-top: 1px dashed #c33a42;
-}
-.joke-section:first-child {
-  padding-top: 0;
-  border-top: none;
-}
-.joke-section .comment-section {
-  line-height: 1.8;
-  font-weight: 300;
-  background: #fcf3fe;
-  padding: 20px 10px 10px;
-  border: 1px solid #e6dae4;
-  border-bottom-color: transparent;
-  position: relative;
-  -moz-border-radius: 6px;
-  -webkit-order-radius: 6px;
-  border-radius: 6px;
-  margin-bottom: 35px;
-}
-.joke-section .comment-section:before {
-  position: absolute;
-  top: 100%;
-  left: 10%;
-  display: inline-block;
-  background: url(../images/comments.png) no-repeat;
-  width: 95px;
-  height: 21px;
-  content: '';
-}
-.recent-joke-wrap [class^="col-"] {
-  margin-bottom: 30px;
-  border-left: 1px solid #cb8fb1;
-}
-.recent-joke-wrap [class^="col-"]:first-child {
-  border-left: none;
-}
-.rtl .recent-joke-wrap [class^="col-"] {
-  border-left: none;
-  border-right: 1px solid #cb8fb1;
-}
-.rtl .recent-joke-wrap [class^="col-"]:first-child {
-  border-right: none;
-}
-.recent-joke {
-  padding: 0 15px;
-  position: relative;
-}
-.joke-footer {
-  font-size: 12px;
-}
-.joke-footer .icon-star {
-  color: #666666;
-}
-.joke-footer .icon-star.active {
-  color: #8c1b5b;
-}
-.tagbar {
-  color: #c33a42;
-}
-.tagbar a {
-  color: #c33a42;
-}
 /******************************
 	Slider Settings 
 *******************************/
@@ -1181,13 +1114,6 @@ ______________________*/
   border-color: #c33a42;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(67, 0, 82, 0.6);
 }
-.joke-detail-section {
-  padding: 0 20px;
-}
-.joke-detail-section p {
-  font-size: 17px;
-  font-weight: 300;
-}
 .rtl .close {
   float: left;
 }
@@ -1311,7 +1237,7 @@ ______________________*/
     margin-bottom: 10px;
   }
   /***************************************
-  	Picture Jokes Detail Page Setting
+  	nav tabs Setting
   ****************************************/
   .nav-tabs > li {
     float: none;
@@ -1348,9 +1274,14 @@ ______________________*/
   }
 }
 .tab-content {
-  -moz-border-radius: 6px;
-  -webkit-order-radius: 6px;
-  border-radius: 6px;
+  -moz-border-radius: 0 6px 6px;
+  -webkit-order-radius: 0 6px 6px;
+  border-radius: 0 6px 6px;
+}
+.rtl .tab-content {
+  -moz-border-radius: 6px 0 6px 6px;
+  -webkit-order-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
 }
 .thumbnail-wrap .thumbnail {
   margin-bottom: 10px;
@@ -1457,15 +1388,6 @@ ______________________*/
   #sidebar,
   #contents {
     padding: 0 0 20px !important;
-  }
-  /***********************
-  	Content Area Setting
-  ************************/
-  .joke-detail-section p {
-    font-size: 16px;
-  }
-  .joke-footer {
-    text-align: center;
   }
   /***********************
   	footer Setting
